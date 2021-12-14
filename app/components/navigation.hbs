@@ -1,0 +1,12 @@
+<nav class="navigation" ...attributes>
+	{{#if this.NAVIGATION_ITEMS.length}}
+		<ul class="nav-items">
+			{{#each this.NAVIGATION_ITEMS as |link|}}
+				<li class="nav-item">
+					<LinkTo @route={{link.route}} class="nav-item-link">{{link.label}}</LinkTo>
+				</li>
+			{{/each}}
+		</ul>
+	{{/if}}
+	{{yield}}
+</nav>
