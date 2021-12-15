@@ -1,2 +1,6 @@
-<ResponsiveImage @src={{concat "assets/images/" @image}} alt={{this.alt}}/>
-{{yield}}
+<div class="overlayed-image" ...attributes style={{this.offsetStyle}}>
+	<ResponsiveImage @src={{concat "assets/images/" @image}} alt={{this.alt}}/>
+	<header class="overlayed-image-header">
+		{{yield (hash title=(component "overlayed-image/title") description=(component "overlayed-image/description"))}}
+	</header>
+</div>
