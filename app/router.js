@@ -12,4 +12,5 @@ Router.map(function() {
 	this.route("photography", function() {
 		this.route("photo", {path: ":photo_path"});
 	});
+	this.route("resume");
 });

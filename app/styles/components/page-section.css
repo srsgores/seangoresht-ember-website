@@ -1,0 +1,23 @@
+.page-section {
+	padding: 0 15%;
+}
+
+.page-section > *:not(.page-section-title) + * {
+	margin-top: 1.5em;
+}
+
+.page-section ul, .page-section ol {
+	list-style: initial;
+	padding: 0 2.5em 1em 2.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.page-section em {
+	font-style: italic;
+}
+
+.page-section strong, .page-section b {
+	font-weight: bold;
+}

@@ -50,6 +50,11 @@ h3 {
 	font-size: 1.8em;
 }
 
+abbr {
+	cursor: help;
+	text-decoration: dotted;
+}
+
 .page-section-title {
 	font-size: calc(1.1vw + 1.5em);
 	text-align: center;
