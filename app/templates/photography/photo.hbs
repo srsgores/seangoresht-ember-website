@@ -1,7 +1,9 @@
 {{page-title this.model.name}}
 
-<Gallery::Photo @photo={{this.model}}>
-	<LinkTo @route="photography" class="close" title="Back to all pictures">❌</LinkTo>
-</Gallery::Photo>
+<div class="gallery-active-photo" aria-live="assertive" aria-label="Current Photo">
+	<Gallery::Photo @photo={{this.model}}>
+		<LinkTo @route="photography" class="close" title="Back to all pictures">❌</LinkTo>
+	</Gallery::Photo>
 
-{{outlet}}
+	{{outlet}}
+</div>

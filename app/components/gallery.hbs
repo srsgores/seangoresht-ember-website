@@ -1,7 +1,5 @@
 <article class="gallery" ...attributes>
-	<div class="gallery-active-photo" aria-live="assertive" aria-label="Current Photo">
-		{{yield}}
-	</div>
+	{{yield}}
 	<ul class="gallery-photos">
 		{{#each @photos as |photo|}}
 			<li class="gallery-photo-container">
