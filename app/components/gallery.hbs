@@ -1,0 +1,12 @@
+<article class="gallery" ...attributes>
+	{{yield}}
+	<ul class="gallery-photos">
+		{{#each @photos as |photo|}}
+			<li class="gallery-photo-container">
+				<LinkTo @route="photography.photo" @model={{photo}}>
+					<Gallery::Photo @photo={{photo}} class="gallery-photo"/>
+				</LinkTo>
+			</li>
+		{{/each}}
+	</ul>
+</article>

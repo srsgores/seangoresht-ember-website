@@ -1,2 +1,8 @@
 {{page-title "Photography"}}
-{{outlet}}
+
+<PageSection as |section|>
+	<section.title>Photography</section.title>
+	<Gallery @photos={{this.photos}}>
+		{{outlet}}
+	</Gallery>
+</PageSection>
