@@ -4,8 +4,8 @@
 	--base-line-height: 1.4;
 	--background-colour: #262626;
 	--text-colour: #e1e1e1;
-	--link-colour: #4a888f;
-	--link-colour-visited: #4c848c;
+	--link-colour: #fff;
+	--link-colour-visited: #dedede;
 }
 
 body {
@@ -13,6 +13,12 @@ body {
 	background-color: var(--background-colour);
 	line-height: var(--base-line-height);
 	color: var(--text-colour);
+}
+
+.banner {
+	padding: 1.5em 1em;
+	background: #0000000a;
+	border-bottom: 0.1em solid #00000014;
 }
 
 @media screen and (min-width: 52.5em) {
