@@ -1,9 +1,11 @@
 <article class="gallery" ...attributes>
-	{{yield}}
+	<div class="gallery-active-photo" aria-live="assertive" aria-label="Current Photo">
+		{{yield}}
+	</div>
 	<ul class="gallery-photos">
 		{{#each @photos as |photo|}}
 			<li class="gallery-photo-container">
-				<LinkTo @route="photography.photo" @model={{photo}}>
+				<LinkTo @route="photography.photo" @model={{photo}} class="gallery-photo-thumbnail">
 					<Gallery::Photo @photo={{photo}} class="gallery-photo"/>
 				</LinkTo>
 			</li>

@@ -1,0 +1,40 @@
+.gallery {
+	--photo-thumbnail-size: 25em;
+	--photo-thumbnail-gap: 1.5em;
+}
+
+.gallery-photos {
+	display: grid;
+	gap: var(--photo-thumbnail-gap);
+	grid-template-columns: repeat(auto-fill, minmax(var(--photo-thumbnail-size), 1fr));
+	grid-template-rows: masonry;
+}
+
+.gallery-active-photo {
+	position: relative;
+}
+
+.gallery-active-photo .close {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	text-decoration: initial;
+	color: currentColor;
+	font-size: 2.5em;
+}
+
+.gallery-photo-container {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.gallery-photo-thumbnail {
+	display: block;
+	transition: 0.3s ease-in-out opacity, 0.3s ease-in-out transform, 0.1s ease-in-out filter;
+	opacity: 0.85;
+	transform-origin: bottom left;
+}
+
+.gallery-photo-thumbnail:hover, .gallery-photo-thumbnail.active {
+	opacity: 1;
+}
