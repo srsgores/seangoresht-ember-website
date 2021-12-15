@@ -11,10 +11,6 @@
 	}
 }
 
-.nav-item {
-	display: inline-block;
-	vertical-align: middle;
-}
 
 .nav-item-link {
 	padding: var(--navigation-item-padding);
