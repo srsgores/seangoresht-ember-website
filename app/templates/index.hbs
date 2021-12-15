@@ -24,4 +24,22 @@
 	<LinkTo @route="resume">View my detailed work history</LinkTo>
 </PageSection>
 
+<PageSection id="other-specialties" as |section|>
+	<section.title>Other Specialties</section.title>
+	<ul class="sub-specialties">
+		<li class="sub-specialty">HTML</li>
+		<li class="sub-specialty">Web Accessibility</li>
+		<li class="sub-specialty">CSS</li>
+		<li class="sub-specialty">JavaScript</li>
+		<li class="sub-specialty">SEO, HTML5 Microdata</li>
+	</ul>
+	<aside>
+		<p>
+			<small>(<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter" target="_blank" rel="nofollow noopener noreferrer"><code>&lt;meter&gt;</code></a> on skills are pointless; I am <em>good</em> at all of these things)
+			</small>
+		</p>
+	</aside>
+	<p><LinkTo @route="projects">View my work samples</LinkTo></p>
+</PageSection>
+
 {{outlet}}
