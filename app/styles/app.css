@@ -55,10 +55,8 @@ abbr {
 	text-decoration: dotted;
 }
 
-.page-section-title {
-	font-size: calc(1.1vw + 1.5em);
+.centred {
 	text-align: center;
-	padding: 1em;
 }
 
 * + .social-links {

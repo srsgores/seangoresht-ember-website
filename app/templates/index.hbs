@@ -42,4 +42,64 @@
 	<p><LinkTo @route="projects">View my work samples</LinkTo></p>
 </PageSection>
 
+<PageSection id="other-resumes" as |pageSection|>
+	<pageSection.title>My Other Resumes</pageSection.title>
+	<PageSection id="travel" as |nestedSection|>
+		<nestedSection.title>Travel</nestedSection.title>
+		<p>Once I started travelling, I couldn't stop.</p>
+		<details>
+			<summary>I've been to <strong>a lot</strong> of countries</summary>
+			<ul class="countries">
+				<li>Nicaragua</li>
+				<li>Vietnam</li>
+				<li>Japan</li>
+				<li>Taiwan</li>
+				<li>Mexico</li>
+				<li>France</li>
+				<li>Morocco</li>
+				<li>Portugal</li>
+				<li>United States</li>
+				<li>Guadeloupe</li>
+				<li>Jamaica</li>
+				<li>Trinidad &amp; Tobago</li>
+				<li>China</li>
+				<li>Singapore</li>
+				<li>India</li>
+				<li>Thailand</li>
+				<li>Malaysia</li>
+				<li>Cambodia</li>
+			</ul>
+		</details>
+	</PageSection>
+
+	<PageSection id="photography" as |nestedSection|>
+		<nestedSection.title>Photography</nestedSection.title>
+
+		<p>Whenever I travel, I try to capture as many of those breathtaking moments as I can. Sometimes, it isn't easy, but I do my best. My process for post-production generally involves correcting the lens profile and the obvious sharpening, detail, and contrast adjustments.</p>
+
+		<p>I own the <a href="https://google.ca/search?q=sony+a6000" target="_blank" rel="nofollow noopener noreferrer">sony a600 mirrorless camera</a>, and I have picked up many versatile lenses over the years, leading to a wealthy library of photos.</p>
+		<LinkTo @route="photography">Check out my photos 📷</LinkTo>
+	</PageSection>
+
+	<PageSection id="music" as |nestedSection|>
+		<nestedSection.title>Music</nestedSection.title>
+		<iframe scrolling="no" title="Sean Goresht's Music" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6011994&amp;color=%23171c19&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" width="100%" height="450" frameborder="no"></iframe>
+		<p>I started playing keyboard at the age of 13, and have since gone on to make some breathtaking musical scores. I do not play in any bands, but I try to get out and participate in open mics.</p>
+		<a href="https://soundcloud.com/sean-goresht" target="_blank" rel="noopener noreferrer">Listen to my tracks online on soundcloud</a>
+	</PageSection>
+
+	<PageSection id="scuba-diving" as |nestedSection|>
+		<nestedSection.title>Scuba Diving</nestedSection.title>
+		<p>Catch me underwater? Quite possible, because I have made diving one of my passions.</p>
+		<p>I try to go diving whenever I can. I have the following certifications:</p>
+		<ul>
+			<li>Open Water</li>
+			<li>Advanced Open Water</li>
+			<li>Nitrox Certification</li>
+			<li>Dry Suit Diver</li>
+			<li>Rescue Diver</li>
+		</ul>
+	</PageSection>
+</PageSection>
+
 {{outlet}}

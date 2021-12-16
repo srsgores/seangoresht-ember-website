@@ -1,12 +1,16 @@
 .page-section {
-	padding: 0 15%;
+	padding: 0 20%;
+}
+
+.page-section.full {
+	padding: 0;
 }
 
 .page-section > *:not(.page-section-title) + * {
 	margin-top: 1.5em;
 }
 
-.page-section ul, .page-section ol {
+.page-section ul:not(.gallery-photos), .page-section ol {
 	list-style: initial;
 	padding: 0 2.5em 1em 2.5em;
 	display: flex;
@@ -20,4 +24,9 @@
 
 .page-section strong, .page-section b {
 	font-weight: bold;
+}
+
+.page-section-title {
+	font-size: calc(1.1vw + 1.5em);
+	margin: 1em 0;
 }
