@@ -68,3 +68,22 @@ abbr {
 	flex-wrap: wrap;
 	gap: 2em;
 }
+
+.tagline {
+	font-size: calc(1em + 1vw);
+	padding: 1em;
+	border: solid 0.35em;
+	margin: 1em;
+}
+
+.bio {
+	padding: 0 2em;
+}
+
+.bio-line {
+	font-size: calc(1em + 0.25vw);
+}
+
+.bio * + * {
+	margin-top: 1em;
+}

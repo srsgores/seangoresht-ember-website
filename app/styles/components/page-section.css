@@ -1,5 +1,26 @@
 .page-section {
-	padding: 0 20%;
+	padding: 0 var(--page-section-padding, 20%);
+}
+
+@media screen and (max-width: 52.5em) {
+	.page-section {
+		--page-section-padding: 15%;
+	}
+}
+
+@media screen and (max-width: 30em){
+	.page-section {
+		--page-section-padding: 2em;
+	}
+}
+
+
+.page-section .page-section {
+	padding: 0;
+}
+
+.page-section .page-section .page-section-title {
+	font-size: calc(1.8em + 0.25vw);
 }
 
 .page-section.full {
@@ -8,6 +29,11 @@
 
 .page-section > *:not(.page-section-title) + * {
 	margin-top: 1.5em;
+}
+
+.page-section.full .page-section-title {
+	text-align: center;
+	padding: 0 1em;
 }
 
 .page-section ul:not(.gallery-photos), .page-section ol {

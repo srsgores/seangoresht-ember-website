@@ -6,14 +6,18 @@
 	<SocialLinks/>
 </OverlayedImage>
 
-<PageSection as |pageSection|>
+<PageSection class="full" as |pageSection|>
 	<pageSection.title>Front-End Web Developer, Creative</pageSection.title>
 	<Grid as |grid|>
 		<grid.column>
 			<ResponsiveImage @src="assets/images/sean-nashville-north-cropped-1-1.jpg" alt="Sean smiling openly"/>
 		</grid.column>
-		<grid.column>
-			<p>I started building websites while in University and have since, <LinkTo @route="projects">built over 15 <strong>commercial</strong> websites.</LinkTo></p>
+		<grid.column class="bio">
+			<blockquote class="tagline">
+				<q>Hey, I'm <strong>Sean</strong>: a <strong>front-end web developer</strong> from <em>Calgary, Alberta, Canada 🍁</em></q>
+			</blockquote>
+			<p class="bio-line">Currently, I work as a <em>Senior Front-end Software Engineer</em> at <a href="https://synopsys.com" target="_blank" rel="noopener noreferrer">Synopsys Inc.</a>, where I write <a href="https://emberjs.com" target="_blank" rel="noopener noreferrer">EmberJS enterprise software</a></p>
+			<p class="bio-line">I've also extensively <a href="https://seangoes.world" target="_blank" rel="noopener noreferrer">travelled the world</a> and have <a href="https://anchor.fm/sean-g7/" target="_blank" rel="noopener noreferrer">my own podcast on front-end web development</a>.</p>
 		</grid.column>
 	</Grid>
 </PageSection>
