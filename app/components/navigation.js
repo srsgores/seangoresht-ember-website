@@ -7,20 +7,8 @@ export default class NavigationComponent extends Component {
 			route: "index"
 		},
 		{
-			label: "About",
-			route: "about"
-		},
-		{
-			label: "Projects",
-			route: "projects"
-		},
-		{
 			label: "Photography",
 			route: "photography"
 		},
-		{
-			label: "Resume",
-			route: "resume"
-		}
 	]
 }
