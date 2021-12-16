@@ -11,6 +11,12 @@ module.exports = function(defaults) {
 					widths: [2048, 1536, 1080, 750, 640]
 				}
 			]
+		},
+		prember: {
+			urls: [
+				"/",
+				"/photography"
+			]
 		}
 	});
 
