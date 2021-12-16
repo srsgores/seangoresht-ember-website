@@ -1,10 +1,22 @@
 {{page-title "Home"}}
 
-<OverlayedImage @image="sean-sitting-by-outdoor-education-centre.jpg" @alt="Sean Goresht, eyeing camera conspicuously with wavvy hair" as |section|>
+<OverlayedImage @image="sean-sitting-by-outdoor-education-centre.jpg" @alt="Sean Goresht, perched on a rock, looking upwards to the sky in an open field" as |section|>
 	<section.title>Sean Goresht</section.title>
 	<section.description>Front-end web developer, coder, musician, creative</section.description>
 	<SocialLinks/>
 </OverlayedImage>
+
+<PageSection as |pageSection|>
+	<pageSection.title>Front-End Web Developer, Creative</pageSection.title>
+	<Grid as |grid|>
+		<grid.column>
+			<ResponsiveImage @src="assets/images/sean-nashville-north-cropped-1-1.jpg" alt="Sean smiling openly"/>
+		</grid.column>
+		<grid.column>
+			<p>I started building websites while in University and have since, <LinkTo @route="projects">built over 15 <strong>commercial</strong> websites.</LinkTo></p>
+		</grid.column>
+	</Grid>
+</PageSection>
 
 <PageSection id="specialties" as |section|>
 	<section.title>Specialties</section.title>
