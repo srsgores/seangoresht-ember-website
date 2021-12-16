@@ -87,3 +87,7 @@ abbr {
 .bio * + * {
 	margin-top: 1em;
 }
+
+details summary {
+	cursor: pointer;
+}
