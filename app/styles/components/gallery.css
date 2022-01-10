@@ -1,6 +1,9 @@
 .gallery {
 	--photo-thumbnail-size: 25em;
 	--photo-thumbnail-gap: 1.5em;
+	--gallery-backdrop-background-colour: rgba(0, 0, 0, 0.95);
+	--gallery-close-offset: 1em;
+	--gallery-close-font-size: 1.5em;
 }
 
 @media screen and (min-width: 37em) {
@@ -20,7 +23,7 @@
 	top: 0;
 	left: 0;
 	padding: 2%;
-	background-color: #000000e3;
+	background-color: var(--gallery-backdrop-background-colour);
 	text-align: center;
 }
 
@@ -31,11 +34,11 @@
 
 .gallery-active-photo .close {
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	top: var(--gallery-close-offset);
+	right: var(--gallery-close-offset);
 	text-decoration: initial;
 	color: currentColor;
-	font-size: 2.5em;
+	font-size: var(--gallery-close-font-size);
 }
 
 .gallery-photo-container {
