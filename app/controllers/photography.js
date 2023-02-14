@@ -65,5 +65,23 @@ export default class PhotographyController extends Controller {
 			path: "nature/yellow-flowers.jpg",
 			name: "Yellow Flowers"
 		}
+	];
+	hackathonPhotos = [
+		{
+			path: "events/yychacks/coder-from-behind.jpg",
+			name: "Coder from Behind"
+		},
+		{
+			path: "events/yychacks/serene-jyoti2.jpg",
+			name: "Calgary Mayor Hugging Event Organizer"
+		},
+		{
+			path: "events/yychacks/participant-whiteboard.jpg",
+			name: "Hackathon Participant Drawing on Whiteboard"
+		},
+		{
+			path: "events/yychacks/group-17-laughing.jpg",
+			name: "Hackathon Group Laughing"
+		}
 	]
 }
