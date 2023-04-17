@@ -83,5 +83,27 @@ export default class PhotographyController extends Controller {
 			path: "events/yychacks/group-17-laughing.jpg",
 			name: "Hackathon Group Laughing"
 		}
+	];
+	weddingPhotos = [
+		{
+			path: "events/weddings/aude-coifee1.jpeg",
+			name: "Bride with Hair Done"
+		},
+		{
+			path: "events/weddings/aude-martin-chateau.jpeg",
+			name: "Bride and Groom in Castle"
+		},
+		{
+			path: "events/weddings/aude-presentant-fleurs-margin.jpeg",
+			name: "Bride Presenting Flowers to Groom"
+		},
+		{
+			path: "events/weddings/confetti1.jpeg",
+			name: "Bride and Groom Showered in Confetti",
+		},
+		{
+			path: "events/weddings/martin-aude-mer1.jpeg",
+			name: "Bride and Groom on the Beach"
+		}
 	]
 }

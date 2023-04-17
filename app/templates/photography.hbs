@@ -1,13 +1,19 @@
 {{page-title "Photography"}}
 
 <PageSection class="full" as |section|>
-	<section.title class="centred">Photography</section.title>
+	<section.title class="centred">Nature Photography</section.title>
+	<p>I've been shooting <em>mirrorless</em> 📸 for roughly <strong>6 years</strong>.  What started as a hobby grew to a passion of mine while travelling.  Though I've more geared myself recently towards <a href="#event-photography">event photography</a>, I also enjoy landscape and nature photography.</p>
 	<Gallery @photos={{this.photos}}>
 		{{outlet}}
 	</Gallery>
-	<section.title>Event Photos</section.title>
+	<section.title id="event-photography">Event Photography</section.title>
 	<p>I have done photography for events such as hackathons, such as <a href="https://yychacks.ca" target="_blank" rel="noopener noreferrer">YYCHacks</a>.</p>
 	<Gallery @photos={{this.hackathonPhotos}}>
+		{{outlet}}
+	</Gallery>
+	<section.title id="wedding-photography">Wedding Photography</section.title>
+	<p>I also do <strong>wedding photography 👰🤵</strong>.</p>
+	<Gallery @photos={{this.weddingPhotos}}>
 		{{outlet}}
 	</Gallery>
 </PageSection>
