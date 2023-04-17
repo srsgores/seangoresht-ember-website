@@ -24,7 +24,7 @@
 }
 
 .page-section.full {
-	padding: 0;
+	padding: 0 1em;
 }
 
 .page-section > *:not(.page-section-title) + * {
