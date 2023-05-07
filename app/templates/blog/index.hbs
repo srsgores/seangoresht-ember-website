@@ -1,0 +1,15 @@
+{{page-title "All Posts"}}
+
+{{#if this.model.length}}
+	<ul class="posts">
+		{{#each this.model as |post|}}
+			<li class="post-container">
+				<LinkTo @route="blog.post" @model={{post}} class="post-link" title={{post.description}}>
+					<BlogPost::Heading @post={{post}}/>
+				</LinkTo>
+			</li>
+		{{/each}}
+	</ul>
+{{/if}}
+
+{{outlet}}

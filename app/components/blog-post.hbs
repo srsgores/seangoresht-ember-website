@@ -1,0 +1,27 @@
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{this.postURL}}">
+	<link href="{{this.postURL}}" itemprop="mainEntityOfPage"/>
+	<BlogPost::Heading @post={{@post}}/>
+
+	<section class="post-body" itemprop="articleBody">
+		{{{@post.html}}}
+	</section>
+
+	{{yield}}
+
+	<footer class="post-footer">
+		<dl class="post-footer-meta">
+			{{#if @post.tags.length}}
+				<dt>Tags</dt>
+				<dd>
+					<ol class="post-tags">
+						{{#each @post.tags as |tag|}}
+							<li class="post-tag">
+								<span class="tag">{{tag.name}}</span>
+							</li>
+						{{/each}}
+					</ol>
+				</dd>
+			{{/if}}
+		</dl>
+	</footer>
+</article>

@@ -1,0 +1,33 @@
+<header class="post-header">
+	{{#if @post.title}}
+		<h2 class="post-title" itemprop="headline">{{@post.title}}</h2>
+		{{#if @post.image.url}}
+			<figure hidden>
+				<img src="{{@post.image.url}}" itemprop="image" alt="{{@post.image.description}}"/>
+			</figure>
+		{{/if}}
+		{{#if @post.description.length}}
+			<p itemprop="description" class="post-excerpt">
+				{{@post.description}}
+			</p>
+		{{/if}}
+		<dl class="post-meta">
+			<dt>Published</dt>
+			<dd>
+				<time datetime="{{moment-format @post.date "YYYY-MM-DD"}}" itemprop="datePublished">{{moment-from-now @post.date}}</time>
+			</dd>
+			<dt class="visuallyhidden">Author</dt>
+			<dd class="visuallyhidden" itemprop="author">Sean Gore</dd>
+			<dt class="visuallyhidden">Last Modified</dt>
+			<dd class="visuallyhidden">
+				<time datetime="{{moment-format @post.modified "YYYY-MM-DD"}}" itemprop="dateModified">{{moment-from-now @post.modified}}</time>
+			</dd>
+			<dt class="visuallyhidden">Publisher</dt>
+			<dd class="visuallyhidden" itemprop="publisher" itemtype="https://schema.org/Person" itemscope>
+				<span itemprop="givenName">Sean</span>
+				<span itemprop="familyName">Gore</span>
+			</dd>
+		</dl>
+	{{/if}}
+	{{yield}}
+</header>
