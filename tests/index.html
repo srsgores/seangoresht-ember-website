@@ -2,17 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<title>SeangoreshtBlog Tests</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta content="" name="description">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
 		{{content-for "head"}}
 		{{content-for "test-head"}}
 
-		<link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-		<link rel="stylesheet" href="{{rootURL}}assets/seangoresht-blog.css">
-		<link rel="stylesheet" href="{{rootURL}}assets/test-support.css">
+		<link href="{{rootURL}}assets/vendor.css" rel="stylesheet">
+		<link href="{{rootURL}}assets/seangoresht-blog.css" rel="stylesheet">
+		<link href="{{rootURL}}assets/test-support.css" rel="stylesheet">
 
 		{{content-for "head-footer"}}
 		{{content-for "test-head-footer"}}
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<script src="/testem.js" integrity="" data-embroider-ignore></script>
+		<script data-embroider-ignore integrity="" src="/testem.js"></script>
 		<script src="{{rootURL}}assets/vendor.js"></script>
 		<script src="{{rootURL}}assets/test-support.js"></script>
 		<script src="{{rootURL}}assets/seangoresht-blog.js"></script>
