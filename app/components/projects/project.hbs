@@ -1,0 +1,30 @@
+<article class="project" ...attributes>
+	<h3 class="project-title"><a href={{this.projectLink}} rel="noopener noreferrer">{{@project.name}}</a></h3>
+	<a class="project-preview-link" href={{this.projectLink}} target="_blank" rel="noopener noreferrer">
+		<ResponsiveImage class="project-image" @src={{get-image-path @project.previewImage}} alt={{@project.name}}/>
+	</a>
+	<p class="project-description">{{@project.description}}</p>
+	<dl class="project-meta">
+		<dt>Technologies</dt>
+		<dd>
+			<ul class="project-technologies">
+				{{#each @project.technologies as |technology|}}
+					<li class="technology">{{technology}}</li>
+				{{else}}
+					None
+				{{/each}}
+			</ul>
+		</dd>
+		<dt>Features</dt>
+		<dd>
+			<ul class="project-features">
+				{{#each @project.features as |feature|}}
+					<li class="feature">{{feature}}</li>
+				{{else}}
+					None
+				{{/each}}
+			</ul>
+		</dd>
+	</dl>
+	{{yield}}
+</article>

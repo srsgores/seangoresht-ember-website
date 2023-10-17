@@ -1,0 +1,33 @@
+.project-image {
+	margin: 2rem 0;
+}
+
+.project-preview-link {
+	display: block;
+	transition: 0.4s ease;
+	transform: scale(0.98);
+}
+
+.project-preview-link:hover, .project-preview-link:focus {
+	transform: scale(0.99);
+}
+
+.project-preview-link:active {
+	transform: scale(1);
+}
+
+.project-preview-link:hover::after, .project-preview-link:focus::after, .project-preview-link:active::after {
+	opacity: 0;
+}
+
+.project-preview-link::after {
+	content: "";
+	background-color: #1e1f22;
+	opacity: 0.1;
+	z-index: 1;
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	transition: inherit;
+}

@@ -1,0 +1,10 @@
+<ol class="projects" ...attributes>
+	{{#if @projects.length}}
+		{{#each @projects as |project|}}
+			<li class="project-container">
+				<Projects::Project @project={{project}}/>
+			</li>
+		{{/each}}
+	{{/if}}
+	{{yield}}
+</ol>
