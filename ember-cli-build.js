@@ -15,7 +15,8 @@ module.exports = function(defaults) {
 		prember: {
 			urls: [
 				"/",
-				"/photography"
+				"/photography",
+				"projects"
 			]
 		}
 	});
