@@ -11,10 +11,6 @@ export default class NavigationComponent extends Component {
 			route: "projects"
 		},
 		{
-			label: "Resume",
-			route: "resume"
-		},
-		{
 			label: "Photography",
 			route: "photography"
 		}
