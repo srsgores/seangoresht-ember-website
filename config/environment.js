@@ -2,10 +2,6 @@
 
 module.exports = function(environment) {
 	let ENV = {
-		supabase: {
-			DATABASE_URL: "https://amrsviwucyjuakmbbztb.supabase.co",
-			PUBLIC_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTA4NjUwMSwiZXhwIjoxOTU0NjYyNTAxfQ.sIf3LvdeQ0Hvf4EJlIfSw4kdBGzOjMTeIBLfx0d94aU"
-		},
 		modulePrefix: "seangoresht-blog",
 		environment,
 		rootURL: "/",
