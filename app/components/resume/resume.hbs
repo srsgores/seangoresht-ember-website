@@ -1,0 +1,39 @@
+<article class="resume" ...attributes>
+	<section class="candidate-information">
+		<header class="resume-header">
+			<div class="resume-headline">
+				<h3 class="name">{{this.name}}</h3>
+				<p class="resume-tagline"><strong>{{this.tagline}}</strong></p>
+			</div>
+			<ResponsiveImage class="profile-image" @width={{450}} @src={{get-image-path "sean-suit-square.jpg"}} alt="Sean Goresht"/>
+			<p class="experience-tagline">{{get-duration this.skills.firstObject.dateStarted}}' experience</p>
+		</header>
+		<section id="experience">
+			<h2>Experience</h2>
+			<dl class="experience-meta">
+				{{#each this.skillsWithExperience as |skill|}}
+					<div class="experience">
+						<dt>{{skill.name}}</dt>
+						<dd class="experience-duration-container">
+							<meter min="1" max={{15}} value={{skill.experienceYears}}>{{get-duration skill.dateStarted}}</meter>
+							<strong class="experience-duration">{{get-duration skill.dateStarted}}</strong>
+						</dd>
+					</div>
+				{{/each}}
+			</dl>
+		</section>
+		<footer class="social-media">
+			<SocialLinks @type="professional"/>
+		</footer>
+	</section>
+
+	<section id="work-history" class="work-history">
+		<h2>Work History</h2>
+
+	</section>
+	<section class="portfolio-links" id="portfolio">
+		<h2>Portfolio</h2>
+
+	</section>
+	{{yield}}
+</article>

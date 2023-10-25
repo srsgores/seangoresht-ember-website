@@ -6,7 +6,7 @@ export const MISSING_DATE_ERROR_MESSAGE = "get-duration helper requires a date";
 
 export const DATE_AFTER_TODAY_WARNING_MESSAGE = "get-duration helper called with date after today.  This will result in a negative duration.  Did you mean this?";
 export const TRANSLATIONS = {
-	year:  "year",
+	year: "year",
 	month: "month"
 };
 
@@ -22,11 +22,11 @@ export default helper(function getDuration(positional/*, named*/) {
 	let duration = "";
 
 	if (years > 0) {
-		duration = `${years} ${TRANSLATIONS.year}${years > 1 ? 's' : ''}`;
+		duration = `${years} ${TRANSLATIONS.year}${years > 1 ? "s" : ""}`;
 	}
 
 	if (months > 0) {
-		duration += `${years > 0 ? ', ' : ''}${months} ${TRANSLATIONS.month}${months > 1 ? 's' : ''}`;
+		duration += `${years > 0 ? ", " : ""}${months} ${TRANSLATIONS.month}${months > 1 ? "s" : ""}`;
 	}
 
 	return duration;

@@ -1,0 +1,79 @@
+.profile-image {
+	border-radius: 50%;
+	height: inherit;
+	padding: 1.5rem;
+	display: block;
+	margin-inline: auto;
+}
+
+.candidate-information {
+	--candidate-max-width: 85rem;
+	--candidate-background: hsla(0, 0%, 0%, 0.2);
+	--candidate-padding: var(--resume-padding);
+	max-width: var(--candidate-max-width);
+	background-color: var(--candidate-background);
+	padding: var(--candidate-padding);
+	display: inline-block;
+	border-radius: 0.5rem;
+	box-shadow: 2rem 2rem 4rem #202020, 2rem 2rem 4rem #00000094;
+	inset: 0;
+}
+
+.resume {
+	--resume-padding: clamp(3rem, calc(1.5rem + 5vmin), 1.5rem);
+	--resume-background: transparent;
+	--resume-margin: 5vmin;
+	padding: var(--resume-padding);
+	background-color: var(--resume-background);
+}
+
+@media screen and (min-width: 50em) {
+	.resume {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+	}
+	.candidate-information {
+		position: sticky;
+	}
+}
+
+.resume-headline {
+	text-align: center;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.name + .resume-tagline {
+	margin-block-start: 1em;
+}
+
+.experience-tagline {
+	text-align: center;
+}
+
+#experience {
+	margin-block-start: 1.25rem;
+}
+
+.experience {
+	display: grid;
+	grid-template-columns: minmax(min-content, 7rem) 1fr;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.experience meter {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.social-media {
+	margin-block-start: 3rem;
+}
+
+.social-media .social-links {
+	justify-content: space-between;
+}
