@@ -1,5 +1,5 @@
 import Component from "@glimmer/component";
-export const LOCALE = "en-CA";
+import config from "ember-get-config";
 
 export default class ResumeRoleComponent extends Component {
 	get startTime() {
@@ -12,12 +12,12 @@ export default class ResumeRoleComponent extends Component {
 		return this.args.role?.startDate.getFullYear();
 	}
 	get fromMonth() {
-		return this.args.role?.startDate.toLocaleString(LOCALE, {month: "long"});
+		return this.args.role?.startDate.toLocaleString(config.locale, {month: "long"});
 	}
 	get toYear() {
 		return this.args.role?.endDate.getFullYear();
 	}
 	get toMonth() {
-		return this.args.role?.endDate.toLocaleString(LOCALE, {month: "long"});
+		return this.args.role?.endDate.toLocaleString(config.locale, {month: "long"});
 	}
 }

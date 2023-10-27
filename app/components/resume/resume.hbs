@@ -57,14 +57,16 @@
 							<dt class="visuallyhidden">Role</dt>
 							<dd>{{engagement.role}}</dd>
 							{{#if engagement.activity}}
-								{{#if engagement.activity.host}}
-									<dt class="visuallyhidden">Host</dt>
-									<dd><a href={{engagement.event.host.link}} target="_blank" rel="noreferrer noopener">{{engagement.activity.host.name}}</a></dd>
-								{{/if}}
 								<dt class="visuallyhidden">Activity</dt>
-								<dd>{{engagement.activity.name}}</dd>
+								<dd><a href={{engagement.activity.host.link}} target="_blank" rel="noreferrer noopener">{{engagement.activity.name}}</a></dd>
 								<dt class="visuallyhidden">Duration</dt>
-								<dd>{{get-duration engagement.activity.startDate engagement.activity.endDate}}</dd>
+								<dd>
+									{{#if engagement.activity.date}}
+										<Time @datetime={{engagement.activity.date}}/>
+									{{else}}
+										{{get-duration engagement.activity.startDate engagement.activity.endDate}}
+									{{/if}}
+								</dd>
 							{{/if}}
 
 						</dl>

@@ -19,11 +19,8 @@ export default class ResumeResumeComponent extends Component {
 			},
 			activity: {
 				name: "AxxE Con",
-				startDate: new Date("2022-05-01"),
-				host: {
-					name: "Deque",
-					link: "https://www.deque.com/axe-con/"
-				}
+				date: new Date("2022-05-01"),
+				link: "https://www.deque.com/axe-con/archives/"
 			}
 		},
 		{
@@ -44,8 +41,8 @@ export default class ResumeResumeComponent extends Component {
 			description: "Selected coach and peer mentor for the Calgary YYC Hacks hackathon",
 			activity: {
 				name: "YYC Hacks",
-				startDate: new Date("2023-02-03"),
-				endDate: new Date("2023-02-05")
+				date: new Date("2023-02-03"),
+				link: "https://www.yychacks.ca"
 			},
 			media: {
 				link: "https://www.yychacks.ca/#speakers",
