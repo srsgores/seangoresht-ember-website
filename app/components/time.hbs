@@ -1,0 +1,7 @@
+<time datetime={{this.formattedDateTime}}>
+	{{#if (has-block)}}
+		{{yield}}
+	{{else}}
+		{{this.localizedTime}}
+	{{/if}}
+</time>
