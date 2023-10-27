@@ -1,0 +1,114 @@
+.role-title {
+	font-weight: bold;
+}
+
+.role-primary {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+}
+
+.role-duration-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 0.9em;
+}
+
+.role-duration {
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.role-start, .role-end {
+	white-space: nowrap;
+}
+
+.role-start ~ .role-end::before {
+	content: "-";
+	margin-inline-end: 0.5em;
+}
+
+.role-company-image {
+	max-width: 8rem;
+	margin-block-start: 0.3rem;
+}
+
+.role-secondary-container {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: end;
+}
+
+.location-meta dd {
+	display: inline-block;
+}
+
+.location-meta dd ~ dd {
+	margin-inline-start: 0.25em;
+}
+
+.role-container + .role-container {
+	margin-block-start: 3rem;
+}
+
+.technologies-container {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin-block-start: 1rem;
+	font-size: 0.8em;
+}
+
+.technologies-container dt {
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.technologies-container dt::after {
+	content: ":";
+}
+
+.technology {
+	display: inline-block;
+}
+
+.technology + .technology {
+	margin-inline-start: 0.25em;
+}
+
+.role-summary {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+}
+
+
+.role-description {
+	font-size: 0.9em;
+	margin-block: 2.5rem;
+	line-height: 1.6;
+}
+
+.role-location {
+	font-size: 0.8em;
+}
+
+.role-capacity {
+	text-transform: uppercase;
+	font-size: 0.55em;
+	padding: 0.4em 1em;
+	border-radius: 4em;
+	text-shadow: 0 1px black;
+	border: 1px solid rgba(173, 173, 173, 0.33);
+	background-color: var(--background-colour, transparent);
+}
+
+.role-capacity[data-capacity="Full-Time"] {
+	--background-colour: rgba(80, 80, 162, 0.69);
+}
+
+.role-capacity[data-capacity="On-Call"] {
+	--background-colour: rgba(192, 25, 25, 0.42);
+}

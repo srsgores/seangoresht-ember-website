@@ -1,39 +1,87 @@
 <article class="resume" ...attributes>
-	<section class="candidate-information">
-		<header class="resume-header">
-			<div class="resume-headline">
-				<h3 class="name">{{this.name}}</h3>
-				<p class="resume-tagline"><strong>{{this.tagline}}</strong></p>
-			</div>
-			<ResponsiveImage class="profile-image" @width={{450}} @src={{get-image-path "sean-suit-square.jpg"}} alt="Sean Goresht"/>
-			<p class="experience-tagline">{{get-duration this.skills.firstObject.dateStarted}}' experience</p>
-		</header>
-		<section id="experience">
-			<h2>Experience</h2>
-			<dl class="experience-meta">
-				{{#each this.skillsWithExperience as |skill|}}
-					<div class="experience">
-						<dt>{{skill.name}}</dt>
-						<dd class="experience-duration-container">
-							<meter min="1" max={{15}} value={{skill.experienceYears}}>{{get-duration skill.dateStarted}}</meter>
-							<strong class="experience-duration">{{get-duration skill.dateStarted}}</strong>
-						</dd>
-					</div>
-				{{/each}}
-			</dl>
+	<div class="candidate-summary">
+		<section class="candidate-information">
+			<header class="candidate-header" aria-label="Candidate name and tagline">
+				<div class="resume-headline">
+					<h3 class="name">{{this.name}}</h3>
+					<dl class="candidate-meta">
+						{{#if this.citizenship.length}}
+							<dt class="visuallyhidden">Citizenship</dt>
+							<dd>
+								<ul class="candidate-nationalities">
+									{{#each this.citizenship as |nationality|}}
+										<li class="nationality" title="Eligible to work in {{nationality.country}}">
+											<span class="visuallyhidden"{{nationality.country}}></span>
+											<span class="country">{{nationality.icon}}</span>
+										</li>
+									{{/each}}
+								</ul>
+							</dd>
+						{{/if}}
+					</dl>
+					<p class="resume-tagline"><strong>{{this.tagline}}</strong></p>
+				</div>
+				<ResponsiveImage class="profile-image" @width={{450}} @src={{get-image-path "sean-suit-square.jpg"}} alt="Sean Goresht"/>
+			</header>
+			<section id="experience">
+				<h2>Experience</h2>
+				<dl class="experience-meta">
+					{{#each this.skillsWithExperience as |skill|}}
+						<div class="experience">
+							<dt>{{skill.name}}</dt>
+							<dd class="experience-duration-container">
+								<meter min="1" max={{15}} value={{skill.experienceYears}}>{{get-duration skill.dateStarted}}</meter>
+								<strong class="experience-duration">{{get-duration skill.dateStarted}}</strong>
+							</dd>
+						</div>
+					{{/each}}
+				</dl>
+			</section>
+			<footer class="social-media">
+				<SocialLinks @type="professional"/>
+			</footer>
 		</section>
-		<footer class="social-media">
-			<SocialLinks @type="professional"/>
-		</footer>
-	</section>
+	</div>
 
-	<section id="work-history" class="work-history">
-		<h2>Work History</h2>
+	<div class="resume-details">
+		<section id="work-history" class="work-history-container">
+			<h2 class="resume-details-section-title">Work History</h2>
+			<Resume::WorkHistory/>
+		</section>
+		<section class="engagements-container">
+			<h2 class="resume-details-section-title">Engagements</h2>
+			<ol class="engagements">
+				{{#each this.engagements as |engagement|}}
+					<li class="engagement">
+						<dl class="contribution-meta">
+							<dt class="visuallyhidden">Role</dt>
+							<dd>{{engagement.role}}</dd>
+							{{#if engagement.activity}}
+								{{#if engagement.activity.host}}
+									<dt class="visuallyhidden">Host</dt>
+									<dd><a href={{engagement.event.host.link}} target="_blank" rel="noreferrer noopener">{{engagement.activity.host.name}}</a></dd>
+								{{/if}}
+								<dt class="visuallyhidden">Activity</dt>
+								<dd>{{engagement.activity.name}}</dd>
+								<dt class="visuallyhidden">Duration</dt>
+								<dd>{{get-duration engagement.activity.startDate engagement.activity.endDate}}</dd>
+							{{/if}}
 
-	</section>
-	<section class="portfolio-links" id="portfolio">
-		<h2>Portfolio</h2>
-
-	</section>
-	{{yield}}
+						</dl>
+						<div class="contribution-description">
+							<p>{{engagement.description}}</p>
+						</div>
+						{{#if engagement.media}}
+							<p><a href={{engagement.media.link}}>{{engagement.media.title}}</a></p>
+						{{/if}}
+					</li>
+				{{/each}}
+			</ol>
+		</section>
+		<section class="portfolio-container" id="portfolio">
+			<h2 class="resume-details-section-title">Projects</h2>
+			<Projects::List @projects={{this.data.projects.openSource}}/>
+		</section>
+		{{yield}}
+	</div>
 </article>

@@ -3,7 +3,7 @@
 <PageSection class="full" as |section|>
 	<section.title class="centred" id="open-source">Open-Source Projects</section.title>
 	<p>I have contributed to <strong>over 6</strong> open-source projects, from the <strong>testing</strong> side as well as to discussions on <strong>web accessibility</strong> and <strong>semantic <abbr title="hypertext markup language">HTML</abbr></strong></p>
-	<Projects::List @projects={{this.projects.openSource}}>
+	<Projects::List @projects={{this.data.projects.openSource}}>
 		{{outlet}}
 	</Projects::List>
 </PageSection>

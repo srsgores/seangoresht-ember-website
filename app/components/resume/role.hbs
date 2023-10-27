@@ -1,0 +1,78 @@
+<div class="role" ...attributes>
+	<dl class="role-meta">
+		<div class="role-primary">
+			<div class="role-summary">
+				<dt class="visuallyhidden">Title</dt>
+				<dd class="role-title">{{@role.title}}</dd>
+				{{#if @role.company.name}}
+					<div class="role-company-container">
+						<dt class="visuallyhidden">Company</dt>
+						<dd class="role-company">
+							<a href={{@role.company.link}} target="_blank" rel="noopener noreferrer">
+								<figure class="role-company-image-container">
+									<img src={{@role.company.imageURL}} class="role-company-image" alt={{@role.company.name}}>
+									<figcaption class="role-company-name {{if @role.company.isTextLogo "visuallyhidden"}}">{{@role.company.name}}</figcaption>
+								</figure>
+							</a>
+						</dd>
+					</div>
+				{{/if}}
+			</div>
+			<div class="role-duration-container">
+				<dt class="visuallyhidden">From</dt>
+				<dd class="role-start">
+					<time datetime={{this.startTime}}>
+						<span class="role-start-month">{{this.fromMonth}}</span>
+						<span class="role-start-year">{{this.fromYear}}</span>
+					</time>
+				</dd>
+				<dt class="visuallyhidden">To</dt>
+				<dd class="role-end">
+					<time datetime={{this.endTime}}>
+						<span class="role-end-month">{{this.toMonth}}</span>
+						<span class="role-end-year">{{this.toYear}}</span>
+					</time>
+				</dd>
+				<dt class="visuallyhidden">Duration</dt>
+				<dd class="role-duration">{{get-duration @role.startDate @role.endDate}}</dd>
+			</div>
+		</div>
+		<div class="role-secondary-container">
+			{{#if @role.capacity}}
+				<dt class="visuallyhidden">Capacity</dt>
+				<dd class="role-capacity" data-capacity={{@role.capacity}}>{{@role.capacity}}</dd>
+			{{/if}}
+			{{#if @role.location}}
+				<dt class="visuallyhidden">Location</dt>
+				<dd class="role-location">
+					<address>
+						<dl class="location-meta">
+							<dt class="visuallyhidden">City</dt>
+							<dd>{{@role.location.city}}</dd>
+							<dt class="visuallyhidden">Region</dt>
+							<dd class="visuallyhidden">{{@role.location.region}}</dd>
+							<dt class="visuallyhidden">Country</dt>
+							<dd>{{@role.location.country}}</dd>
+						</dl>
+					</address>
+				</dd>
+			{{/if}}
+		</div>
+		<dt class="visuallyhidden">Description</dt>
+		<dd class="role-description">{{@role.description}}</dd>
+
+		{{#if @role.technologies.length}}
+			<div class="technologies-container">
+				<dt>Technologies</dt>
+				<dd>
+					<ul class="technologies">
+						{{#each @role.technologies as |technology|}}
+							<li class="technology">{{technology}}</li>
+						{{/each}}
+					</ul>
+				</dd>
+			</div>
+		{{/if}}
+	</dl>
+	{{yield}}
+</div>

@@ -1,0 +1,12 @@
+<div class="work-history" ...attributes>
+	{{#if this.roles.length}}
+		<ol class="work-history-timeline">
+			{{#each this.roles as |role|}}
+				<li class="role-container">
+					<Resume::Role @role={{role}}/>
+				</li>
+			{{/each}}
+		</ol>
+	{{/if}}
+	{{yield}}
+</div>

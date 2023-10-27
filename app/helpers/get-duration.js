@@ -10,9 +10,9 @@ export const TRANSLATIONS = {
 	month: "month"
 };
 
-export default helper(function getDuration(positional/*, named*/) {
-	const [date] = positional;
-	const now = new Date();
+export default helper(function getDuration(positional) {
+	const [date, endDate] = positional;
+	const now = endDate ?? new Date();
 	assert(MISSING_POSITIONAL_PARAM_ERROR_MESSAGE, date);
 	assert(`${MISSING_DATE_ERROR_MESSAGE}; got ${typeof date}`, date instanceof Date);
 	warn(DATE_AFTER_TODAY_WARNING_MESSAGE, date < now, {id: "get-duration.invalid-date"});
