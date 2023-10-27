@@ -13,7 +13,8 @@
 	max-width: var(--candidate-max-width);
 	background-color: var(--candidate-background);
 	padding: var(--candidate-padding);
-	display: inline-block;
+	width: fit-content;
+	margin-inline: auto;
 	border-radius: 0.5rem;
 	box-shadow: 2rem 2rem 4rem #202020, 2rem 2rem 4rem #00000094;
 	inset: 0;
@@ -31,13 +32,17 @@
 	background-color: var(--resume-background);
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 92em) {
 	.resume {
 		display: flex;
 		gap: 1.5rem;
 	}
 	.candidate-information {
 		position: sticky;
+		top: 1rem;
+	}
+	.resume-details section {
+		padding-inline: 4rem;
 	}
 }
 
@@ -102,7 +107,7 @@
 }
 
 .resume-details section {
-	padding: 3rem 4rem;
+	padding-block: 3rem;
 }
 
 .work-history-container {
@@ -120,3 +125,9 @@
 	justify-content: flex-end;
 }
 
+.candidate-experience-heading {
+	font-size: 2.1rem;
+	font-weight: bold;
+	margin-block-end: 0.7rem;
+	letter-spacing: 0.02em;
+}
