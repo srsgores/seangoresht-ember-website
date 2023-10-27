@@ -1,0 +1,14 @@
+.contribution-meta {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.contribution-description {
+	font-size: 0.9em;
+	margin-block: 1em;
+}
+
+.engagement + .engagement {
+	margin-block-start: 3em;
+}
