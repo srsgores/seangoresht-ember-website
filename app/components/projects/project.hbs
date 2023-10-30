@@ -1,9 +1,11 @@
 <article class="project" ...attributes>
-	<h3 class="project-title"><a href={{this.projectLink}} rel="noopener noreferrer">{{@project.name}}</a></h3>
-	<a class="project-preview-link" href={{this.projectLink}} target="_blank" rel="noopener noreferrer">
-		<ResponsiveImage class="project-image" @src={{get-image-path @project.previewImage}} alt={{@project.name}}/>
-	</a>
-	<p class="project-description">{{@project.description}}</p>
+	<header class="project-header">
+		<h3 class="project-title"><a href={{this.projectLink}} rel="noopener noreferrer">{{@project.name}}</a></h3>
+		<p class="project-description">{{@project.description}}</p>
+		<a class="project-preview-link" href={{this.projectLink}} target="_blank" rel="noopener noreferrer">
+			<ResponsiveImage class="project-image" @src={{get-image-path @project.previewImage}} alt={{@project.name}}/>
+		</a>
+	</header>
 	<dl class="project-meta">
 		<dt>Technologies</dt>
 		<dd>
