@@ -5,7 +5,7 @@ export default class ResumeWorkHistoryComponent extends Component {
 			company: {
 				name: "Synopsys",
 				link: "https://synopsys.com",
-				imageURL: "https://www.synopsys.com/content/dam/synopsys/company/about/legal/synopsys-logos/whitewhite/snps-logo-sts-white.png",
+				imageURL: "/assets/images/work-history/synopsys.png",
 				isTextLogo: true
 			},
 			capacity: "Full-Time",
@@ -23,7 +23,9 @@ export default class ResumeWorkHistoryComponent extends Component {
 		{
 			company: {
 				name: "Lighthouse Labs",
-				link: "https://lighthouselabs.ca"
+				link: "https://lighthouselabs.ca",
+				imageURL: "/assets/images/work-history/lighthouse-labs.png",
+				isTextLogo: true
 			},
 			capacity: "On-Call",
 			startDate: new Date(2019, 5, 1),
@@ -40,7 +42,10 @@ export default class ResumeWorkHistoryComponent extends Component {
 		{
 			company: {
 				name: "Hitachi ID Systems",
-				link: "",
+				link: "https://www.bravurasecurity.com/",
+				imageURL: "/assets/images/work-history/hitachi-id.png",
+				isTextLogo: true,
+				logoIsInverted: true
 			},
 			startDate: new Date(2017, 3, 1),
 			endDate: new Date(2018, 1, 1),
