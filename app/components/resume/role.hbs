@@ -10,7 +10,7 @@
 						<dd class="role-company">
 							<a href={{@role.company.link}} target="_blank" rel="noopener noreferrer">
 								<figure class="role-company-image-container">
-									<img src={{@role.company.imageURL}} class="role-company-image" alt={{@role.company.name}}>
+									<ResponsiveImage @src={{@role.company.imageURL}} class="role-company-image {{if @role.company.logoIsInverted "inverted"}}" alt={{@role.company.name}}/>
 									<figcaption class="role-company-name {{if @role.company.isTextLogo "visuallyhidden"}}">{{@role.company.name}}</figcaption>
 								</figure>
 							</a>
