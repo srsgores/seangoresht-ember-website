@@ -34,6 +34,20 @@
 	margin-block-start: 0.3rem;
 }
 
+.role-company-image-container {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.role-company-link {
+	text-decoration: none;
+}
+
+.role-company .iconify {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .role-secondary-container {
 	display: flex;
 	gap: 1rem;

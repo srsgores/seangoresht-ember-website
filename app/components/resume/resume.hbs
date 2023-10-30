@@ -58,7 +58,7 @@
 							<dd>{{engagement.role}}</dd>
 							{{#if engagement.activity}}
 								<dt class="visuallyhidden">Activity</dt>
-								<dd><a href={{engagement.activity.host.link}} target="_blank" rel="noreferrer noopener">{{engagement.activity.name}}</a></dd>
+								<dd><a href={{engagement.activity.host.link}} target="_blank" rel="noreferrer noopener">{{engagement.activity.name}} <IconifyIcon @icon="gridicons:external"/></a></dd>
 								<dt class="visuallyhidden">Duration</dt>
 								<dd>
 									{{#if engagement.activity.date}}
@@ -68,13 +68,12 @@
 									{{/if}}
 								</dd>
 							{{/if}}
-
 						</dl>
 						<div class="contribution-description">
 							<p>{{engagement.description}}</p>
 						</div>
 						{{#if engagement.media}}
-							<p><a href={{engagement.media.link}}>{{engagement.media.title}}</a></p>
+							<p><a href={{engagement.media.link}}>{{engagement.media.title}} <IconifyIcon @icon="gridicons:external"/></a> </p>
 						{{/if}}
 					</li>
 				{{/each}}
