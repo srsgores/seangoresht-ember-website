@@ -101,9 +101,12 @@
 	flex-wrap: wrap;
 }
 
-.engagements-container {
-	flex: 0.5;
+@media screen and (min-width: 65em) {
+	.engagements-container {
+		flex: 0.5;
+	}
 }
+
 
 .resume-details section {
 	padding-block: 3rem;
