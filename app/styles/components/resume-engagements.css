@@ -12,3 +12,7 @@
 .engagement + .engagement {
 	margin-block-start: 3em;
 }
+
+.engagement-title {
+	font-weight: bold;
+}

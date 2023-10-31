@@ -1,5 +1,5 @@
 @media print {
-	.banner, .experience-duration-container meter, .social-media, .role-company-image-container, .iconify--gridicons {
+	.banner, .experience-duration-container meter, .social-media, .role-company-image-container, .iconify--gridicons, .project-meta, .project-preview-link {
 		display: none !important;
 	}
 	.resume {
