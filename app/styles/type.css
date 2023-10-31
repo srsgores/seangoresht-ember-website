@@ -1,0 +1,38 @@
+.prose ul, .prose ol {
+	list-style: initial;
+	padding: 0 2.5em 1em 2.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+a {
+	color: var(--link-colour);
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--link-colour-visited);
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+abbr {
+	cursor: help;
+	text-decoration: dotted;
+}
+
+details summary {
+	cursor: pointer;
+}
