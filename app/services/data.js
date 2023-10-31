@@ -81,6 +81,19 @@ export default class DataService extends Service {
 					link: "https://mystifying-archimedes-165fe5.netlify.app"
 				},
 				{
+					name: "Astro Starter",
+					technologies: ["Astro", "HTML", "CSS", "JSX", "Vite", "Netlify Functions", "Vittest"],
+					description: "Astro batteries-included template, built for accessibility and simplicity",
+					features: [
+						"Responsive images for various viewport sizes, automatically generated using <picture> element",
+						"Single-page application via view transitions API",
+						"Accessible, semantic landmarks integrated throughout each page",
+						"Independent CSS files, allowing each CSS file to be cached separately"
+					],
+					githubLink: "https://github.com/srsgores/astro-starter",
+					link: "https://astrostarter.netlify.app/"
+				},
+				{
 					name: "Ember Former",
 					technologies: ["Javascript", "Ember.js", "HTML", "CSS", "Handlebars.js", "Qunit", "Testem"],
 					description: "Form generation tool for EmberJS that allows dynamically building forms via inferring form fields from Ember Data.",
