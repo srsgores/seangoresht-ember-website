@@ -3,9 +3,9 @@
 		<section class="candidate-information">
 			<header class="candidate-header" aria-label="Candidate name and tagline">
 				<div class="resume-headline">
-					<h3 class="name">{{this.name}}</h3>
+					<h3 class="name">{{this.data.name}}</h3>
 					<dl class="candidate-meta">
-						{{#if this.citizenship.length}}
+						{{#if this.data.citizenship.length}}
 							<dt class="visuallyhidden">Citizenship</dt>
 							<dd>
 								<ul class="candidate-nationalities">
@@ -19,7 +19,7 @@
 							</dd>
 						{{/if}}
 					</dl>
-					<p class="resume-tagline"><strong>{{this.tagline}}</strong></p>
+					<p class="resume-tagline"><strong>{{this.data.tagline}}</strong></p>
 				</div>
 				<ResponsiveImage class="profile-image" @width={{450}} @src={{get-image-path "sean-suit-square.jpg"}} alt="Sean Goresht"/>
 			</header>
@@ -51,7 +51,7 @@
 		<section class="engagements-container">
 			<h2 class="resume-details-section-title">Engagements</h2>
 			<ol class="engagements">
-				{{#each this.engagements as |engagement|}}
+				{{#each this.data.engagements as |engagement|}}
 					<li class="engagement">
 						<dl class="contribution-meta">
 							<dt class="visuallyhidden">Role</dt>

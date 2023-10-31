@@ -1,7 +1,7 @@
 <div class="work-history" ...attributes>
-	{{#if this.roles.length}}
+	{{#if this.sortedRoles.length}}
 		<ol class="work-history-timeline">
-			{{#each this.roles as |role|}}
+			{{#each this.sortedRoles as |role|}}
 				<li class="role-container">
 					<Resume::Role @role={{role}}/>
 				</li>
