@@ -16,7 +16,8 @@ module.exports = function(defaults) {
 			urls: [
 				"/",
 				"/photography",
-				"projects"
+				"projects",
+				"resume"
 			]
 		}
 	});
