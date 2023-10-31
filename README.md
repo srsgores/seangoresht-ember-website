@@ -1,7 +1,10 @@
-# seangoresht-blog
+# Sean Goresht's Ember Website
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+EmberJS personal website for Sean Goresht, statically rendered via [prember](https://github.com/ef4/prember/).
+
+![website preview](public/assets/images/projects/this-website.png)
+
+[Live, deployed website (Netlify)](https://seangoresht.com)
 
 ## Prerequisites
 
@@ -14,8 +17,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd seangoresht-blog`
+* `git clone https://github.com/srsgores/seangoresht-ember-website` this repository
+* `cd seangoresht-ember-website`
 * `npm install`
 
 ## Running / Development

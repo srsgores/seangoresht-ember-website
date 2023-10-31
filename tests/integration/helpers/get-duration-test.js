@@ -1,7 +1,7 @@
 import {module, test} from "qunit";
 import {setupRenderingTest} from "ember-qunit";
 import {render, setupOnerror} from "@ember/test-helpers";
-import {MISSING_DATE_ERROR_MESSAGE, MISSING_POSITIONAL_PARAM_ERROR_MESSAGE} from "seangoresht-blog/helpers/get-duration";
+import {MISSING_DATE_ERROR_MESSAGE, MISSING_POSITIONAL_PARAM_ERROR_MESSAGE} from "seangoresht-ember-website/helpers/get-duration";
 import {hbs} from "ember-cli-htmlbars";
 
 const ERROR_PREFIX = "Assertion Failed: ";

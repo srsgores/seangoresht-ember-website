@@ -1,5 +1,5 @@
 {
-  "name": "seangoresht-blog",
+  "name": "seangoresht-ember-website",
   "version": "1.0.0",
   "private": true,
   "description": "Personal website for Sean Goresht in EmberJS; statically-rendered via prember",
