@@ -1,0 +1,36 @@
+@media print {
+	.banner, .experience-duration-container meter, .social-media, .role-company-image-container, .iconify--gridicons {
+		display: none !important;
+	}
+	.resume {
+		--resume-padding: 0;
+	}
+	a[href]::after {
+		content: " (" attr(href) ")";
+	}
+	.candidate-information {
+		--resume-padding: 2rem;
+		padding-block: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: initial;
+		gap: 1rem;
+	}
+	.candidate-experience-heading {
+		margin-block-start: 1.4rem;
+	}
+	.profile-image {
+		max-width: 18rem;
+	}
+	.engagements-container {
+		flex: auto;
+	}
+	.role {
+		break-before: avoid;
+	}
+	.role-capacity {
+		text-shadow: none;
+		border: 0;
+	}
+}
