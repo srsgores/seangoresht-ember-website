@@ -1,6 +1,6 @@
 .overlayed-image {
 	position: relative;
-	overflow-y: hidden;
+	overflow: hidden;
 	--top-offset: 0;
 	--overlayed-image-background-colour: linear-gradient(60deg, rgba(0, 0, 0, 0.58) 50%, rgba(255, 255, 255, 0) 100%);
 }
@@ -28,8 +28,10 @@
 	z-index: -1;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 55em) {
 	.overlayed-image .eri-responsive {
-		top: 0;
+		inset: 0;
+		max-width: none;
+		width: clamp(100%, 40em, calc(35vh + 50em));
 	}
 }
