@@ -138,6 +138,7 @@
 .education-meta {
 	display: flex;
 	gap: 1.5rem;
+	align-items: center;
 }
 
 .education-meta sup {
