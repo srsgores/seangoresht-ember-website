@@ -56,6 +56,12 @@
 		grid-template-columns: minmax(30rem, 50rem) 1fr;
 		grid-template-areas: "media" "description";
 	}
+	.project-title-container {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: center;
+	}
 }
 
 .project-meta dt {
@@ -72,4 +78,9 @@
 
 .project-description {
 	font-size: 0.9em;
+}
+
+.project-links {
+	display: flex;
+	gap: 1rem;
 }

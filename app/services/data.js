@@ -18,7 +18,8 @@ export default class DataService extends Service {
 						"Transferable to other computers.  Export and import your stories to other machines and remain offline.",
 						"Infinitely nestable timelines.  No limit to the amount of timelines and stories you can add.  You can even add timelines to the events themselves!"
 					],
-					githubLink: "https://github.com/srsgores/storyplanner"
+					githubLink: "https://github.com/srsgores/storyplanner",
+					link: "https://mystifying-archimedes-165fe5.netlify.app"
 				},
 				{
 					name: "Ember Former",
@@ -29,7 +30,8 @@ export default class DataService extends Service {
 						"Date, range, and colour inputs supported",
 						"Semantic HTML using <fieldset>s and <legend>s",
 						"Test coverage through QUnit and Test'em"
-					]
+					],
+					githubLink: "https://github.com/srsgores/ember-former"
 				},
 				{
 					name: "This website",
@@ -40,7 +42,8 @@ export default class DataService extends Service {
 						"Single-Page Application using EmberJS",
 						"Accessible, semantic landmarks integrated throughout each page",
 						"Independent CSS files, allowing each CSS file to be cached separately"
-					]
+					],
+					githubLink: "https://github.com/srsgores/seangoresht-ember-website"
 				}
 			].map(function (project) {
 				return {...project, previewImage: `${PREVIEW_DIRECTORY}/${dasherize(project.name)}.png`};

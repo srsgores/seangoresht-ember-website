@@ -1,6 +1,24 @@
 <article class="project" ...attributes>
 	<header class="project-header">
-		<h3 class="project-title"><a href={{this.projectLink}} rel="noopener noreferrer">{{@project.name}}</a></h3>
+		<div class="project-title-container">
+			<h3 class="project-title">
+				{{@project.name}}
+			</h3>
+			<ul class="project-links">
+				{{#if @project.link}}
+					<li class="project-link">
+						<a href={{@project.link}} target="_blank" rel="noopener noreferrer"><span class="visuallyhidden">Preview</span> <IconifyIcon @icon="gridicons:external" @height={{40}}/></a>
+					</li>
+				{{/if}}
+				{{#if @project.githubLink}}
+					<li class="project-link">
+						<a href={{@project.githubLink}} target="_blank" rel="noopener noreferrer">
+							<span class="visuallyhidden">Github</span> <IconifyIcon @icon="mdi:github" @height={{40}}/>
+						</a>
+					</li>
+				{{/if}}
+			</ul>
+		</div>
 		<p class="project-description">{{@project.description}}</p>
 		<a class="project-preview-link" href={{this.projectLink}} target="_blank" rel="noopener noreferrer">
 			<ResponsiveImage class="project-image" @src={{get-image-path @project.previewImage}} alt={{@project.name}}/>
