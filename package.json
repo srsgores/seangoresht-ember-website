@@ -1,11 +1,11 @@
 {
   "name": "seangoresht-blog",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Small description for seangoresht-blog goes here",
-  "repository": "",
+  "description": "Personal website for Sean Goresht in EmberJS; statically-rendered via prember",
+  "repository": "https://github.com/srsgores/seangoresht-ember-website",
   "license": "MIT",
-  "author": "",
+  "author": "Sean Goresht",
   "directories": {
     "doc": "doc",
     "test": "tests"
