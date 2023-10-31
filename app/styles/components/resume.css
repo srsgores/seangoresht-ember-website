@@ -153,3 +153,12 @@
 	flex-wrap: wrap;
 	font-size: 0.85em;
 }
+
+.resume .project {
+	--media-min-width: 30rem;
+	--media-max-width: 50rem;
+}
+
+.resume .project-title-container {
+	justify-content: space-between;
+}

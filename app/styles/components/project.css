@@ -1,5 +1,12 @@
+.projects {
+	list-style: none;
+}
+
 .project {
 	margin-block-end: 2.5rem;
+	--media-max-width: 1fr;
+	--media-min-width: 35rem;
+	--project-gap: clamp(1rem, 3rem, calc(1vw + 1em));
 }
 
 .project-title {
@@ -40,27 +47,33 @@
 	transition: inherit;
 }
 
+.project-meta dt::after {
+	content: ":";
+}
+
+.project-meta ul {
+	padding: 0 2.5em 1em 2.5em;
+}
+
+.project-title-container {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
 @media screen and (min-width: 60rem) {
 	.project-meta {
 		display: grid;
 		grid-template-columns: min-content 1fr;
 		gap: 2rem;
 	}
-	.project-meta dt::after {
-		content: ":";
-	}
-	.resume .project {
+	.project {
 		display: grid;
-		gap: 1rem;
+		gap: var(--project-gap);
 		align-items: center;
-		grid-template-columns: minmax(30rem, 50rem) 1fr;
+		grid-template-columns: minmax(var(--media-min-width), var(--media-max-width)) 1fr;
 		grid-template-areas: "media" "description";
-	}
-	.project-title-container {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		align-items: center;
 	}
 }
 
@@ -83,4 +96,19 @@
 .project-links {
 	display: flex;
 	gap: 1rem;
+}
+
+@media screen and (max-width: 60em) {
+	.project-description {
+		margin-block: 1em;
+	}
+	.project-features {
+		list-style: initial;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+	.project-meta dt ~ dt {
+		margin-block-start: 1em;
+	}
 }
