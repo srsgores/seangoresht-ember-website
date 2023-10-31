@@ -7,7 +7,7 @@ module("Integration | Component | time", function (hooks) {
 	setupRenderingTest(hooks);
 
 	test("it renders", async function (assert) {
-		await render(hbs`<Time />`);
+		await render(hbs`<Time/>`);
 
 		assert.dom(this.element).hasText("");
 
