@@ -79,6 +79,25 @@
 				{{/each}}
 			</ol>
 		</section>
+		<section id="education">
+			<h2 class="resume-details-section-title">Education</h2>
+			<dl class="education-meta">
+				<dt class="visuallyhidden">Institution</dt>
+				<dd class="institution-name"><a href="https://www.ucalgary.ca/">University of Calgary <IconifyIcon @icon="gridicons:external"/></a></dd>
+				<dt class="visuallyhidden">Degree</dt>
+				<dd>
+					<dl class="degree-meta">
+						<dt class="visuallyhidden">Major</dt>
+						<dd class="degree-major">Bachelor of Arts <sup class="print-only">(Multidisciplinary Studies)</sup></dd>
+						<dt class="visuallyhidden">Minor</dt>
+						<dd class="degree-minor">Computer Science</dd>
+						<dd class="degree-minor">Sonic Arts</dd>
+					</dl>
+				</dd>
+				<dt class="visuallyhidden">Date</dt>
+				<dd class="graduation-year"><time datetime="2013-05-01">2013</time></dd>
+			</dl>
+		</section>
 		<section class="portfolio-container" id="portfolio">
 			<h2 class="resume-details-section-title">Projects</h2>
 			<Projects::List @projects={{this.data.projects.openSource}}/>

@@ -130,3 +130,26 @@
 	margin-block-end: 0.7rem;
 	letter-spacing: 0.02em;
 }
+
+.institution-name, .graduation-year {
+	font-weight: bold;
+}
+
+.education-meta {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.education-meta sup {
+	font-size: 0.75em;
+	vertical-align: top;
+}
+
+.degree-meta {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 0.85em;
+}
