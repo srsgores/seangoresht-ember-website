@@ -10,14 +10,20 @@ export const TRANSLATIONS = {
 	month: "month"
 };
 
-export default helper(function getDuration(positional) {
+export default helper(function getDuration(positional, named) {
 	const [date, endDate] = positional;
+	const {format} = named;
+	const isShortFormat = format === "short";
 	const now = endDate ?? new Date();
 	assert(MISSING_POSITIONAL_PARAM_ERROR_MESSAGE, date);
 	assert(`${MISSING_DATE_ERROR_MESSAGE}; got ${typeof date}`, date instanceof Date);
 	warn(DATE_AFTER_TODAY_WARNING_MESSAGE, date < now, {id: "get-duration.invalid-date"});
-	const years = now.getFullYear() - date.getFullYear();
+	let years = now.getFullYear() - date.getFullYear();
 	const months = now.getMonth() - date.getMonth();
+	if (isShortFormat && months > 0) {
+		const yearDecimal = Math.round(months / 12);
+		years += yearDecimal;
+	}
 
 	let duration = "";
 
@@ -25,7 +31,7 @@ export default helper(function getDuration(positional) {
 		duration = `${years} ${TRANSLATIONS.year}${years > 1 ? "s" : ""}`;
 	}
 
-	if (months > 0) {
+	if (!isShortFormat && months > 0) {
 		duration += `${years > 0 ? ", " : ""}${months} ${TRANSLATIONS.month}${months > 1 ? "s" : ""}`;
 	}
 

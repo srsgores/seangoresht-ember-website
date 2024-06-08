@@ -30,8 +30,7 @@
 						<div class="experience">
 							<dt>{{skill.name}}</dt>
 							<dd class="experience-duration-container">
-								<meter min="1" max={{15}} value={{skill.experienceYears}}>{{get-duration skill.dateStarted}}</meter>
-								<strong class="experience-duration">{{get-duration skill.dateStarted}}</strong>
+								<strong class="experience-duration">{{get-duration skill.dateStarted format="short"}}</strong>
 							</dd>
 						</div>
 					{{/each}}

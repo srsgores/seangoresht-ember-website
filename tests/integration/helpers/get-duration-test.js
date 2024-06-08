@@ -67,4 +67,29 @@ module("Integration | Helper | get-duration", function (hooks) {
 		await render(hbs`{{get-duration this.startDate this.endDate}}`);
 		assert.dom(this.element).hasText(expectedDurationInMonths);
 	});
+
+	test("It omits month when format=\"short\"", async function (assert) {
+		const today = new Date();
+		const thisYear = today.getFullYear();
+		const monthDifference = 2;
+		this.endDate = new Date(thisYear, today.getMonth() - monthDifference, today.getDate());
+		this.startDate = new Date(thisYear - 1, today.getMonth(), today.getDate());
+		const expectedDurationInMonths = `${monthDifference} months`;
+
+		await render(hbs`{{get-duration this.startDate this.endDate format="short"}}`);
+		assert.dom(this.element).doesNotIncludeText(expectedDurationInMonths);
+	});
+
+	test("It rounds up year by .5 increments when format=\"short\"", async function (assert) {
+		const today = new Date();
+		const thisYear = today.getFullYear();
+		const monthDifference = 6; // 6 should mean .5 years
+		const yearDifference = 1;
+		this.endDate = new Date(thisYear, today.getMonth() - monthDifference, today.getDate());
+		this.startDate = new Date(thisYear - yearDifference, today.getMonth(), today.getDate());
+		const expectedShortenedDuration = `${yearDifference}.5 years`;
+
+		await render(hbs`{{get-duration this.startDate this.endDate format="short"}}`);
+		assert.dom(this.element).hasText(expectedShortenedDuration);
+	});
 });

@@ -7,7 +7,7 @@ export default class NavigationComponent extends Component {
 			route: "index"
 		},
 		{
-			label: "Portfolio",
+			label: "Projects",
 			route: "projects"
 		},
 		{

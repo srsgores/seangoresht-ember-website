@@ -139,8 +139,18 @@ export default class DataService extends Service {
 				city: "Calgary",
 				region: "Alberta"
 			},
-			description: "Large-scale enterprise JavaScript EmberJS development for code coverage and static code analysis tool. Leverage EmberJS microservice architecture using Ember Engines, ember cli (QUnit, Babel, ES2020, Handlebars). Coordinate and plan team UI engineering infrastructure efforts. Maintain and manage code quality through daily code reviews. Customize, test, and implement custom ember data adapters and serializers based on JSON:API and REST. Implement data visualization through HighCharts customized charts and graphs.",
-			technologies: ["EmberJS", "MirageJS", "QUnit", "Test'em", "Highcharts", "jQuery", "Zurb Foundation"]
+			achievements: [
+				"Led UI infrastructure development and streamlined team efforts through regular component library meetings.",
+				"Advised on critical UX and accessibility best practices, managing accessibility-related tickets.",
+				"Ensured WCAG 2.0 compliance, representing the company at various accessibility and UX conferences.",
+				"Developed front-end UI coding standards for 100+ developers.",
+				"Migrated Lerna monorepo to npm workspace multirepo.",
+				"Led EmberJS microservice architecture migration effort to Ember Engines.",
+				"Implemented data visualization with HighCharts customized charts and graphs.",
+				"Guided the UI Engineering team to achieve 91% testing code coverage.",
+				"Implemented ember data adapters and serializers based on JSON:API and REST.",
+			],
+			technologies: ["EmberJS", "MirageJS", "QUnit", "Test'em", "Highcharts", "Handlebars", "datadog", "GCP", "jQuery", "Zurb Foundation", "Lerna"]
 		},
 		{
 			company: {
@@ -158,8 +168,15 @@ export default class DataService extends Service {
 				city: "Calgary",
 				region: "Alberta"
 			},
-			description: "Teach, implement, and develop curriculum for Canadian intensive web development bootcamp.  Instruct and help over 200 students learn HTML, Javascript, ReactJS, CSS, and Ruby (on rails).  Assist in course development, developing over 17 different course modules.  Provide code reviews for students on VCS (GitHub).",
-			technologies: ["ReactJS", "Ruby on Rails", "Sinatra", "StorybookJS", "Cyprus"]
+			achievements: [
+				"Taught 5+ separate 15-20-student cohorts for full-stack web development course",
+				"Developed and maintained JavaScript and HTML accessibility curriculum for web bootcamp students",
+				"Created and updated curriculum for CSS Grid and viewport units",
+				"Streamlined student contribution process through Ruby on Rails back-end",
+				"Provided code reviews to over 200 students in HTML5, ReactJS, CSS, and accessibility best practices",
+				"Evaluated and graded student submissions"
+			],
+			technologies: ["ReactJS", "Ruby", "Ruby on Rails", "Sinatra", "StorybookJS", "Cyprus"]
 		},
 		{
 			company: {
@@ -178,7 +195,11 @@ export default class DataService extends Service {
 				city: "Calgary",
 				region: "Alberta"
 			},
-			description: "Maintain, develop, and collaborate on ACL management system. Implement web user interfaces using ES2015 and ES2017, Typescript, and other modern front-end technologies.",
+			achievements: [
+				"Implemented web user interfaces using ES2015 and ES2017, Typescript, and other modern front-end technologies",
+				"Engineered TypeScript Angular 2 service architecture for ACL management system",
+				"Provided and maintained 95% test coverage through end-to-end Protractor and Robot framework tests"
+			],
 			technologies: ["AngularJS", "Typescript", "jQuery", "Protractor", "RxJS", "Zurb Foundation", "Python", "Robot Framework"]
 		}
 	]
