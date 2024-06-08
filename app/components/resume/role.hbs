@@ -59,8 +59,21 @@
 				</dd>
 			{{/if}}
 		</div>
-		<dt class="visuallyhidden">Description</dt>
-		<dd class="role-description">{{@role.description}}</dd>
+		{{#if @role.description}}
+			<dt class="visuallyhidden">Description</dt>
+			<dd class="role-description">{{@role.description}}</dd>
+		{{/if}}
+
+		{{#if @role.achievements.length}}
+			<dt class="visuallyhidden">Achievements</dt>
+			<dd>
+				<ul class="role-achievements">
+					{{#each @role.achievements as |achievement|}}
+						<li class="role-achievement">{{achievement}}</li>
+					{{/each}}
+				</ul>
+			</dd>
+		{{/if}}
 
 		{{#if @role.technologies.length}}
 			<div class="technologies-container">

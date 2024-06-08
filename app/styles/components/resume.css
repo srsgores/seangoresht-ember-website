@@ -107,6 +107,13 @@
 	}
 }
 
+.role-achievements {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	list-style: disc;
+	margin-inline-start: 1.3rem;
+}
 
 .resume-details section {
 	padding-block: 3rem;
