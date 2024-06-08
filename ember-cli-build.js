@@ -7,7 +7,7 @@ module.exports = function(defaults) {
 		"responsive-image": {
 			images: [
 				{
-					include: "assets/images/**/*",
+					include: "assets/images/**/*.{jpg,jpeg,png,gif}",
 					widths: [2048, 1536, 1080, 750, 640]
 				}
 			]

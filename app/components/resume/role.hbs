@@ -10,7 +10,11 @@
 						<dd class="role-company">
 							<a href={{@role.company.link}} class="role-company-link" target="_blank" rel="noopener noreferrer">
 								<figure class="role-company-image-container">
-									<ResponsiveImage @src={{@role.company.imageURL}} class="role-company-image {{if @role.company.logoIsInverted "inverted"}}" alt={{@role.company.name}}/>
+									{{#if @role.company.logoIsResponsive}}
+										<img src="{{@role.company.imageURL}}" class="role-company-image {{if @role.company.logoIsInverted "inverted"}}" alt="{{@role.company.name}}"/>
+									{{else}}
+										<ResponsiveImage @src={{@role.company.imageURL}} class="role-company-image {{if @role.company.logoIsInverted "inverted"}}" alt={{@role.company.name}}/>
+									{{/if}}
 									<figcaption class="role-company-name {{if @role.company.isTextLogo "visuallyhidden"}}">{{@role.company.name}}</figcaption>
 								</figure>
 								<IconifyIcon @icon="gridicons:external"/>

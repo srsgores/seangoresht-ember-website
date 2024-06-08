@@ -206,8 +206,9 @@ export default class DataService extends Service {
 			company: {
 				name: "Xello Inc.",
 				link: "https://xello.world",
-				imageURL: "/assets/images/work-history/xello-logo.svg", // replace with the actual logo image path if different
-				isTextLogo: true
+				imageURL: "/assets/images/work-history/xello-logo.svg",
+				isTextLogo: true,
+				logoIsResponsive: true,
 			},
 			capacity: "Full-Time",
 			startDate: new Date(2024, 1, 22),
