@@ -201,6 +201,32 @@ export default class DataService extends Service {
 				"Provided and maintained 95% test coverage through end-to-end Protractor and Robot framework tests"
 			],
 			technologies: ["AngularJS", "Typescript", "jQuery", "Protractor", "RxJS", "Zurb Foundation", "Python", "Robot Framework"]
+		},
+		{
+			company: {
+				name: "Xello Inc.",
+				link: "https://xello.world",
+				imageURL: "/assets/images/work-history/xello-logo.svg", // replace with the actual logo image path if different
+				isTextLogo: true
+			},
+			capacity: "Full-Time",
+			startDate: new Date(2024, 1, 22),
+			endDate: new Date(),
+			title: "Senior Software Engineer",
+			location: {
+				country: "Canada",
+				city: "Toronto",
+				region: "Ontario"
+			},
+			achievements: [
+				"Implemented Figma component designs from the bottom up, adhering to front-end best practices",
+				"Ensured WCAG 2.2 accessibility compliance",
+				"Contributed, aided, and assisted in custom component library for the Xello Higher Education"
+			],
+			technologies: [
+				"AngularJS",
+				"Typescript"
+			]
 		}
 	]
 }
